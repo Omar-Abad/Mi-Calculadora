@@ -1,0 +1,113 @@
+* {
+    font-family: 'Fraunces', serif;
+    /* Aplica la fuente 'Fraunces' a todos los elementos y establece el tipo de letra como serif */
+    color: #fff;
+    /* Establece el color del texto de todos los elementos a blanco */
+}
+
+body {
+    margin: 0;
+    /* Elimina el margen predeterminado del cuerpo del documento */
+    background-color: #141414;
+    /* Establece el color de fondo del cuerpo del documento a un gris oscuro */
+}
+
+.container {
+    display: flex;
+    /* Utiliza el modelo de caja flexible (Flexbox) */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    height: 100vh;
+    /* Establece la altura del contenedor al 100% de la altura de la ventana gráfica */
+}
+
+.calculadora {
+    display: grid;
+    /* Utiliza el modelo de diseño de cuadrícula (Grid) */
+    grid-template-columns: repeat(4, 75px);
+    /* Define una cuadrícula de 4 columnas con cada columna de 75px de ancho */
+    grid-template-rows: 160px repeat(5, 75px);
+    /* Define una cuadrícula de 6 filas, la primera de 160px de alto y las siguientes de 75px de alto */
+    background-color: rgb(11, 166, 228);
+    /* Establece el color de fondo de la calculadora a un verde oscuro */
+    padding: 15px;
+    /* Aplica un relleno interno de 15px alrededor de la calculadora */
+    border-radius: 32px;
+    /* Aplica un borde redondeado de 32px a la calculadora */
+    box-shadow: 15px 10px 0px 5px #00000033;
+    /* Aplica una sombra a la caja con un desplazamiento de 15px horizontal, 10px vertical, 0px de desenfoque y 5px de extensión, con color negro semitransparente */
+}
+
+button {
+    cursor: pointer;
+    /* Cambia el cursor a un puntero cuando se pasa sobre el botón */
+    margin: 5px;
+    /* Aplica un margen externo de 5px alrededor del botón */
+    padding: 0;
+    /* Elimina cualquier relleno interno del botón */
+    border-radius: 32px;
+    /* Aplica un borde redondeado de 32px al botón */
+    font-size: 1.5em;
+    /* Establece el tamaño de la fuente del botón a 1.5em */
+    border: none;
+    /* Elimina cualquier borde del botón */
+    background-color: rgb(13, 41, 165);
+    /* Establece el color de fondo del botón a un verde oscuro */
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f;
+    /* Aplica una sombra a la caja con múltiples sombras: una con un desplazamiento de 5px horizontal y vertical, 10px de desenfoque, -3px de extensión, con color negro semitransparente, y otra con un desplazamiento de -5px horizontal y vertical, 15px de desenfoque, 3px de extensión, con color verde semitransparente */
+}
+
+button:active {
+    background-color: #006f54;
+    /* Cambia el color de fondo del botón cuando está activo (presionado) a un verde más oscuro */
+}
+
+button:focus {
+    outline: none;
+    /* Elimina el contorno predeterminado del botón cuando está enfocado */
+}
+
+.col-2 {
+    grid-column: span 2;
+    /* Hace que el elemento ocupe dos columnas en la cuadrícula */
+}
+
+.display {
+    grid-column: 1 / -1;
+    /* Hace que el elemento se extienda desde la primera hasta la última columna */
+    padding: 16px;
+    /* Aplica un relleno interno de 16px */
+    display: flex;
+    /* Utiliza el modelo de caja flexible (Flexbox) */
+    margin: 10px 10px 20px;
+    /* Aplica un margen externo de 10px en los lados izquierdo y derecho y 20px en la parte inferior */
+    flex-direction: column;
+    /* Ordena los elementos secundarios en una columna */
+    align-items: flex-end;
+    /* Alinea los elementos secundarios al final del eje transversal (derecha) */
+    background-color: #363636;
+    /* Establece el color de fondo del display a un gris oscuro */
+    border-radius: 32px;
+    /* Aplica un borde redondeado de 32px al display */
+    text-align: right;
+    /* Alinea el texto a la derecha */
+    justify-content: space-between;
+    /* Distribuye el espacio restante de manera uniforme entre los elementos secundarios */
+    word-break: break-all;
+    /* Permite que las palabras se rompan en cualquier punto para evitar desbordamientos */
+    box-shadow: 0px 0px 0px 10px #00000033;
+    /* Aplica una sombra interna a la caja con 0px de desplazamiento horizontal y vertical, 0px de desenfoque, 10px de extensión, con color negro semitransparente */
+}
+
+#valor-actual {
+    font-size: 1.5em;
+    /* Establece el tamaño de la fuente del elemento con id 'valor-actual' a 1.5em */
+}
+
+#valor-anterior {
+    font-size: 2em;
+    /* Establece el tamaño de la fuente del elemento con id 'valor-anterior' a 2em */
+}
+

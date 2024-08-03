@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Declaración del tipo de documento y configuración del idioma a inglés -->
+<head>
+    <!-- Cabeza del documento donde se colocan metadatos y enlaces a recursos -->
+    <meta charset="UTF-8">
+    <!-- Establece la codificación de caracteres del documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la ventana gráfica para que la página sea responsiva -->
+    <title>Calculadora</title>
+    <!-- Título del documento que se muestra en la pestaña del navegador -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap" rel="stylesheet">
+    <!-- Enlace a una fuente de Google Fonts para usar la fuente "Fraunces" en la página -->  
+    <link href="style.css" rel="stylesheet">
+    <!-- Enlace a una hoja de estilo externa llamada "style.css" -->  
+    <script src="Display.js" type="text/javascript"></script>
+    <!-- Enlace a un archivo JavaScript externo llamado "Display.js" -->   
+    <script src="Calculadora.js" type="text/javascript"></script>
+    <!-- Enlace a un archivo JavaScript externo llamado "Calculadora.js" -->    
+    <script src="index.js" type="text/javascript" defer></script>
+    <!-- Enlace a un archivo JavaScript externo llamado "index.js" con atributo defer para cargarlo después de que el documento se haya parseado -->
+</head>
+<body>
+    <!-- Cuerpo del documento donde se coloca el contenido visible de la página -->
+    <div class="container">
+        <!-- Contenedor principal de la calculadora con clase "container" -->       
+        <div class="calculadora">
+            <!-- Div de la calculadora con clase "calculadora" -->           
+            <div class="display">
+                <!-- Div del display con clase "display" donde se mostrarán los valores de la calculadora -->              
+                <div id="valor-anterior"></div>
+                <!-- Div para mostrar el valor anterior con id "valor-anterior" -->               
+                <div id="valor-actual"></div>
+                <!-- Div para mostrar el valor actual con id "valor-actual" -->
+            </div>          
+            <button class="col-2" onclick="display.borrarTodo()">C</button>
+            <!-- Botón para borrar todo con clase "col-2" que ocupa dos columnas, y un evento onclick que llama a la función "borrarTodo" del objeto "display" -->            
+            <button onclick="display.borrar()">&larr;</button>
+            <!-- Botón para borrar el último carácter con un evento onclick que llama a la función "borrar" del objeto "display" -->
+            <button class="operador" value="dividir">/</button>
+            <!-- Botón de operador para dividir con clase "operador" y valor "dividir" -->
+            <button class="numero">7</button>
+            <!-- Botón de número 7 con clase "numero" -->
+            <button class="numero">8</button>
+            <!-- Botón de número 8 con clase "numero" -->
+            <button class="numero">9</button>
+            <!-- Botón de número 9 con clase "numero" -->
+            <button class="operador" value="multiplicar">X</button>
+            <!-- Botón de operador para multiplicar con clase "operador" y valor "multiplicar" -->
+            <button class="numero">4</button>
+            <!-- Botón de número 4 con clase "numero" -->
+            <button class="numero">5</button>
+            <!-- Botón de número 5 con clase "numero" -->
+            <button class="numero">6</button>
+            <!-- Botón de número 6 con clase "numero" -->
+            <button class="operador" value="resta">-</button>
+            <!-- Botón de operador para restar con clase "operador" y valor "resta" -->
+            <button class="numero">1</button>
+            <!-- Botón de número 1 con clase "numero" -->
+            <button class="numero">2</button>
+            <!-- Botón de número 2 con clase "numero" -->
+            <button class="numero">3</button>
+            <!-- Botón de número 3 con clase "numero" -->
+            <button class="operador" value="sumar">+</button>
+            <!-- Botón de operador para sumar con clase "operador" y valor "sumar" -->
+            <button class="col-2 numero">0</button>
+            <!-- Botón de número 0 que ocupa dos columnas con clases "col-2" y "numero" -->
+            <button class="numero">.</button>
+            <!-- Botón de punto decimal con clase "numero" -->
+            <button class="operador" value="igual">=</button>
+            <!-- Botón de operador para igual con clase "operador" y valor "igual" -->
+        </div>
+    </div>
+</body>
+</html>
